@@ -29,3 +29,9 @@
 		В таком случае нескольких нажатий клавиши "Enter" в консоли будет достаточно.
 	Остальные проблемы будут выписываются в консоль.
 	
+
+
+
+source code: https://github.com/mixren/ITP_automation
+github: @mixren
+Version 1.0.0
