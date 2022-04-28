@@ -28,6 +28,10 @@ def read_itp_model_from_excel(path_excel_table: str, excel_sheet_name: str, exce
 def run_generator(itp_models: list[ItpModel]):
     target_dir = fem.into_nested_dir('', TARGET_DIR)
 
+    if not wm.template_exists():
+        print(f"Template Word document doesn't exist. Should be '{TEMPLATE}'")
+        return
+        
     partial_generate_itp = functools.partial(generate_itp_word, TEMPLATE, target_dir)
     with concurrent.futures.ProcessPoolExecutor() as executor:
         executor.map(partial_generate_itp, itp_models)
