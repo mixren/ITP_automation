@@ -3,9 +3,10 @@ import os
 from itp_model import ItpModel
 
 EXT = "docx"
+ITP_TEMPLATE = "repo\\ITP_template.docx"
 
-def template_exists(self) -> bool:
-    return os.path.exists(self.PATH_VT_TEMPLATE)
+def template_exists() -> bool:
+    return os.path.exists(ITP_TEMPLATE)
 
 def create_word_from_template(path_template: str, path_target_no_ext: str, itp_model: ItpModel):
     path_target = f'{path_target_no_ext}.{EXT}'

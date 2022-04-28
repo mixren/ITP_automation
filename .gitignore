@@ -4,3 +4,4 @@ dist/
 repo/
 build/
 *.spec
+generated/
